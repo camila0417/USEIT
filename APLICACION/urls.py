@@ -15,11 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url, include
-from usuario.views import Registrar, Iniciar_sesion
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('usuario.urls')),
-    url(r'^Usuario/Registrar/', Registrar),
-    url(r'^Usuario/Login/', Iniciar_sesion),
 ]
