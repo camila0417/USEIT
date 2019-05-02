@@ -1,0 +1,80 @@
+{% extends 'base/base.html' %}
+
+{% block title%}
+
+Registrar Usuario
+
+{% endblock %}
+
+{% block content %}
+
+<form method="post">
+  {% csrf_token %}
+
+  <div id="navigation-section" id="login"><h4 align="center">Registro de nuevo usuario</h4></div>
+ 
+<p align="center">
+  <div style="width: 700px; text-align: left; margin: 0 auto" class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div style="width: 700px; text-align: left; margin: 0 auto" class="form-group">
+        <label>Nombre</label>
+        <input class="form-control" type="text" name="first_name">
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <div style="width: 700px; text-align: left; margin: 0 auto" class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div style="width: 700px; text-align: left; margin: 0 auto" class="form-group">
+        <label >Apellidos</label>
+        <input class="form-control" type="text" name="last_name">
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <div style="width: 700px; text-align: left; margin: 0 auto" class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div style="width: 700px; text-align: left; margin: 0 auto" class="form-group">
+        <label >Nombre de usuario</label>
+        <input class="form-control" type="text" name="username">
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <div style="width: 700px; text-align: left; margin: 0 auto" class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div style="width: 700px; text-align: left; margin: 0 auto" class="form-group">
+        <label >Correo</label>
+        <input class="form-control" type="text" name="email">
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <div style="width: 700px; text-align: left; margin: 0 auto" class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div style="width: 700px; text-align: left; margin: 0 auto" class="form-group">
+        <label >Contraseña</label>
+        <input class="form-control" type="password" name="password1">
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <div style="width: 700px; text-align: left; margin: 0 auto" class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div style="width: 700px; text-align: left; margin: 0 auto" class="form-group">
+        <label >Confirmar contraseña</label>
+        <input class="form-control" type="password" name="password2">
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <div style="width: 700px; text-align: center; margin: 0 auto" class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div style="width: 700px; text-align: center; margin: 0 auto" class="form-group">
+        <button class="btn btn-primary "type="submit">Guardar</button>
+      </div>
+    </div>
+  </div></p>
+  
+</form>
+{% endblock %}
